@@ -1,7 +1,7 @@
 // ── PERSONAL INFO ─────────────────────────────────────────────
 // Replace these with your real details
 export const personal = {
-  name: 'Sravan Sanathanam',
+  name: 'Sravan Kumar Sanathanam',
   title: 'PhD Researcher',
   institution: 'Alabama A&M University',
   tagline: 'Plant Genomics, Transcriptomics & Multi-Omics',
@@ -9,7 +9,7 @@ export const personal = {
     'PhD researcher specialising in plant molecular biology, functional genomics, and computational biology with hands-on expertise in cotton and soybean stress systems. My work integrates wet-lab experimentation with large-scale multi-omics analysis — connecting RNA-seq transcriptomics, rhizosphere microbiome profiling, and functional pathway enrichment.',
     'I thrive at the intersection of plant biology and bioinformatics — designing experiments, building reproducible analysis pipelines, and interpreting complex datasets to extract meaningful biological insight for agriculture and crop improvement.',
   ],
-  email: 'sravankumar.sana@bulldogs.aamu.edu',
+  email: 'sravan.sanathanam@gmail.com',
   linkedin: 'https://www.linkedin.com/in/sravan-sanathanam/',
   github: 'https://github.com/sravan-sanathanam',
   scholar: 'https://scholar.google.com/citations?user=t2o9yU8AAAAJ&hl=en',
@@ -255,17 +255,17 @@ export const research = [
 export const publications = [
   {
     year: '2025',
-    title: 'Low-Temperature Plasma: A Green Technology for Improving Crop Productivity and Seed Safety',
-    journal: 'Global Journal of Agricultural and Allied Sciences',
-    role: 'Author',
-    doi: 'https://doi.org/10.35251/gjaas.2025.007',
-  },
-  {
-    year: '2025',
     title: 'Effects of biopolymers, cork, and Rhizobium tropici-derived extracellular polymeric substances on soil microbial communities',
     journal: 'Frontiers in Microbiomes',
     role: 'Author',
     doi: 'https://doi.org/10.3389/frmbi.2025.1614472',
+  },
+  {
+    year: '2025',
+    title: 'Low-Temperature Plasma: A Green Technology for Improving Crop Productivity and Seed Safety',
+    journal: 'Global Journal of Agricultural and Allied Sciences',
+    role: 'Author',
+    doi: 'https://doi.org/10.35251/gjaas.2025.007',
   },
   {
     year: '2024',
@@ -286,6 +286,6 @@ export const publications = [
     title: 'Variation in Growth, Yield, and Curcumin Content of Turmeric (Curcuma longa) Genotypes Grown in North Alabama',
     journal: 'HortScience',
     role: 'Author',
-    doi: '#',
+    doi: 'https://ashs.confex.com/ashs/2023/meetingapp.cgi/Paper/40180',
   },
 ]
