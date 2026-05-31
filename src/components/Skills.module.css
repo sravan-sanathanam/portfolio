@@ -1,0 +1,116 @@
+.section {
+  padding: 4.5rem 2.5rem;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  letter-spacing: 0.16em;
+  color: var(--green-400);
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1.75rem 0 1.5rem;
+}
+
+.tab {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.35rem 0.85rem;
+  border: 0.5px solid rgba(99, 153, 34, 0.22);
+  border-radius: 2px;
+  cursor: pointer;
+  color: var(--text-muted);
+  letter-spacing: 0.07em;
+  background: transparent;
+  transition: all 0.15s;
+}
+
+.tab:hover {
+  border-color: var(--green-400);
+  color: var(--text-accent);
+  background: rgba(99, 153, 34, 0.06);
+}
+
+.activeTab {
+  border-color: var(--green-400);
+  color: var(--text-accent);
+  background: rgba(99, 153, 34, 0.09);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border);
+  border-radius: 4px;
+  padding: 1.25rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.card:hover {
+  border-color: var(--border-green);
+  background: var(--bg-card-hover);
+}
+
+.icon {
+  font-size: 1.1rem;
+  color: var(--green-300);
+  margin-bottom: 0.7rem;
+  display: block;
+}
+
+.cardTitle {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #ddeec8;
+  margin-bottom: 0.55rem;
+}
+
+.cardDesc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.05em;
+  color: var(--green-500);
+  background: rgba(74, 122, 26, 0.09);
+  border: 0.5px solid rgba(74, 122, 26, 0.22);
+  padding: 0.18rem 0.45rem;
+  border-radius: 2px;
+}
+
+@media (max-width: 720px) {
+  .section { padding: 3rem 1.25rem; }
+  .grid { grid-template-columns: 1fr; }
+}
