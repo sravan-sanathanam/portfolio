@@ -7,6 +7,7 @@ const links = [
   { icon: 'ti-brand-linkedin', label: 'LinkedIn',      href: personal.linkedin },
   { icon: 'ti-brand-github',   label: 'GitHub',        href: personal.github },
   { icon: 'ti-book',           label: 'Google Scholar',href: personal.scholar },
+  { icon: 'ti-id',             label: 'ORCID',         href: personal.orcid },
   { icon: 'ti-file-text',      label: 'Download CV',   href: personal.cvUrl, download: true },
 ]
 

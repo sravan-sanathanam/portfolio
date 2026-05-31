@@ -1,19 +1,20 @@
 // ── PERSONAL INFO ─────────────────────────────────────────────
 // Replace these with your real details
 export const personal = {
-  name: 'Dr. A. Researcher',           // Your full name
+  name: 'Sravan Sanathanam',
   title: 'PhD Researcher',
-  institution: 'Your University',       // Your institution
+  institution: 'Alabama A&M University',
   tagline: 'Plant Genomics, Transcriptomics & Multi-Omics',
   bio: [
     'PhD researcher specialising in plant molecular biology, functional genomics, and computational biology with hands-on expertise in cotton and soybean stress systems. My work integrates wet-lab experimentation with large-scale multi-omics analysis — connecting RNA-seq transcriptomics, rhizosphere microbiome profiling, and functional pathway enrichment.',
     'I thrive at the intersection of plant biology and bioinformatics — designing experiments, building reproducible analysis pipelines, and interpreting complex datasets to extract meaningful biological insight for agriculture and crop improvement.',
   ],
-  email: 'your.email@university.edu',   // Your email
-  linkedin: 'https://linkedin.com/in/yourprofile',
-  github: 'https://github.com/yourusername',
-  scholar: 'https://scholar.google.com/citations?user=YOURID',
-  cvUrl: '/cv.pdf',                      // Place your CV in /public/cv.pdf
+  email: 'sravankumar.sana@bulldogs.aamu.edu',
+  linkedin: 'https://www.linkedin.com/in/sravan-sanathanam/',
+  github: 'https://github.com/sravan-sanathanam',
+  scholar: 'https://scholar.google.com/citations?user=t2o9yU8AAAAJ&hl=en',
+  orcid: 'https://orcid.org/0009-0002-8192-8400',
+  cvUrl: '/cv.pdf',
 }
 
 // ── STATS ──────────────────────────────────────────────────────
@@ -253,31 +254,38 @@ export const research = [
 // Replace with your real publications
 export const publications = [
   {
+    year: '2025',
+    title: 'Low-Temperature Plasma: A Green Technology for Improving Crop Productivity and Seed Safety',
+    journal: 'Global Journal of Agricultural and Allied Sciences',
+    role: 'Author',
+    doi: 'https://doi.org/10.35251/gjaas.2025.007',
+  },
+  {
+    year: '2025',
+    title: 'Effects of biopolymers, cork, and Rhizobium tropici-derived extracellular polymeric substances on soil microbial communities',
+    journal: 'Frontiers in Microbiomes',
+    role: 'Author',
+    doi: 'https://doi.org/10.3389/frmbi.2025.1614472',
+  },
+  {
     year: '2024',
-    title: 'Transcriptomic and microbiome co-analysis reveals genotype-dependent rhizosphere responses to reniform nematode infection in cotton',
-    journal: 'The Plant Journal',
-    role: 'First author',
-    doi: '#',  // Replace with real DOI link
+    title: 'Physiological and Biochemical Responses of Turmeric (Curcuma longa L.) Under Drought Stress',
+    journal: 'Journal of Medicinally Active Plants',
+    role: 'Author',
+    doi: 'https://doi.org/10.7275/jmap.2315',
   },
   {
     year: '2023',
-    title: 'Time-course RNA-seq analysis of salt stress responses in susceptible and tolerant soybean genotypes',
-    journal: 'Plant & Cell Physiology',
-    role: 'First author',
+    title: 'Effects of Low-Temperature Plasma on Seed Germination, Seedling Growth, and Drought Tolerance of Mustard Greens',
+    journal: 'HortScience',
+    role: 'Author',
     doi: '#',
   },
   {
     year: '2023',
-    title: 'Functional enrichment of stress-responsive DEGs reveals conserved KEGG pathways in crop resistance mechanisms',
-    journal: 'Frontiers in Plant Science',
-    role: 'Co-author',
-    doi: '#',
-  },
-  {
-    year: '2022',
-    title: 'PICRUSt2-based functional inference of cotton rhizosphere communities under nematode pressure',
-    journal: 'Molecular Plant-Microbe Interactions',
-    role: 'Contributing author',
+    title: 'Variation in Growth, Yield, and Curcumin Content of Turmeric (Curcuma longa) Genotypes Grown in North Alabama',
+    journal: 'HortScience',
+    role: 'Author',
     doi: '#',
   },
 ]
