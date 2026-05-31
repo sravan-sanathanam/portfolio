@@ -1,0 +1,32 @@
+.about {
+  padding: 4.5rem 2.5rem;
+  max-width: 760px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  letter-spacing: 0.16em;
+  color: var(--green-400);
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.body {
+  color: var(--text-secondary);
+  line-height: 1.85;
+  font-size: 0.97rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 720px) {
+  .about { padding: 3rem 1.25rem; }
+}

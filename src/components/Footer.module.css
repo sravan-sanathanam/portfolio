@@ -1,0 +1,25 @@
+.footer {
+  padding: 1.75rem 2.5rem;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: rgba(151, 196, 89, 0.5);
+}
+
+.note {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 720px) {
+  .footer { padding: 1.25rem; }
+}
