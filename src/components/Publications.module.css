@@ -1,6 +1,6 @@
 .section {
   padding: 4.5rem 2.5rem;
-  background: rgba(0, 0, 0, 0.12);
+  background: #f7faf4;
 }
 
 .eyebrow {
@@ -61,7 +61,7 @@
 .pubTitle {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #ddeec8;
+  color: var(--text-primary);
   margin-bottom: 0.35rem;
   line-height: 1.45;
 }
