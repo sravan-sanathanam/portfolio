@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theme Preview</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f0f0f0; padding: 30px; }
+    h1 { text-align: center; margin-bottom: 30px; color: #333; font-size: 1.4rem; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+
+    .card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+
+    .theme-bar {
+      display: flex;
+      height: 12px;
+    }
+    .theme-bar span { flex: 1; }
+
+    .preview {
+      padding: 24px;
+    }
+
+    .label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .title {
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+    }
+
+    .bio {
+      font-size: 0.78rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .tags {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-right: 8px;
+      text-decoration: none;
+      cursor: default;
+    }
+
+    /* ── Theme 1: Forest Green ── */
+    .t1 { background: #ffffff; }
+    .t1 .label { color: #3a7d1e; }
+    .t1 .name { color: #1a2e0f; }
+    .t1 .title { color: #555; }
+    .t1 .bio { color: #444; }
+    .t1 .tag { background: #e8f5e0; color: #3a7d1e; }
+    .t1 .btn-solid { background: #3a7d1e; color: #fff; }
+    .t1 .btn-outline { border: 1.5px solid #3a7d1e; color: #3a7d1e; background: transparent; }
+    .t1-bar { background: #3a7d1e; }
+    .t1-bar2 { background: #6ab04c; }
+    .t1-bar3 { background: #c8e6b0; }
+
+    /* ── Theme 2: Deep Navy ── */
+    .t2 { background: #ffffff; }
+    .t2 .label { color: #2a52be; }
+    .t2 .name { color: #1a2340; }
+    .t2 .title { color: #555; }
+    .t2 .bio { color: #444; }
+    .t2 .tag { background: #e8ecfa; color: #2a52be; }
+    .t2 .btn-solid { background: #2a52be; color: #fff; }
+    .t2 .btn-outline { border: 1.5px solid #2a52be; color: #2a52be; background: transparent; }
+    .t2-bar { background: #2a52be; }
+    .t2-bar2 { background: #5b7ee5; }
+    .t2-bar3 { background: #c5d0f5; }
+
+    /* ── Theme 3: Teal ── */
+    .t3 { background: #ffffff; }
+    .t3 .label { color: #0d7377; }
+    .t3 .name { color: #0a2e30; }
+    .t3 .title { color: #555; }
+    .t3 .bio { color: #444; }
+    .t3 .tag { background: #d9f2f3; color: #0d7377; }
+    .t3 .btn-solid { background: #0d7377; color: #fff; }
+    .t3 .btn-outline { border: 1.5px solid #0d7377; color: #0d7377; background: transparent; }
+    .t3-bar { background: #0d7377; }
+    .t3-bar2 { background: #14a3a8; }
+    .t3-bar3 { background: #b2e8ea; }
+
+    /* ── Theme 4: Emerald ── */
+    .t4 { background: #ffffff; }
+    .t4 .label { color: #059669; }
+    .t4 .name { color: #0f2620; }
+    .t4 .title { color: #555; }
+    .t4 .bio { color: #444; }
+    .t4 .tag { background: #d1fae5; color: #059669; }
+    .t4 .btn-solid { background: #059669; color: #fff; }
+    .t4 .btn-outline { border: 1.5px solid #059669; color: #059669; background: transparent; }
+    .t4-bar { background: #059669; }
+    .t4-bar2 { background: #10b981; }
+    .t4-bar3 { background: #a7f3d0; }
+  </style>
+</head>
+<body>
+  <h1>Theme Previews — White Background</h1>
+  <div class="grid">
+
+    <!-- Theme 1 -->
+    <div class="card">
+      <div class="theme-bar">
+        <span class="t1-bar"></span><span class="t1-bar2"></span><span class="t1-bar3"></span>
+      </div>
+      <div class="preview t1">
+        <div class="label">Option 1 — Forest Green</div>
+        <div class="name">Sravan Kumar Sanathanam</div>
+        <div class="title">PhD Researcher · Alabama A&M University</div>
+        <div class="bio">Plant genomics researcher specialising in RNA-seq, microbiome profiling, and multi-omics analysis for crop improvement.</div>
+        <div class="tags">
+          <span class="tag">RNA-seq</span>
+          <span class="tag">DESeq2</span>
+          <span class="tag">QIIME2</span>
+          <span class="tag">CRISPR</span>
+        </div>
+        <span class="btn btn-solid">View Research</span>
+        <span class="btn btn-outline">Contact Me</span>
+      </div>
+    </div>
+
+    <!-- Theme 2 -->
+    <div class="card">
+      <div class="theme-bar">
+        <span class="t2-bar"></span><span class="t2-bar2"></span><span class="t2-bar3"></span>
+      </div>
+      <div class="preview t2">
+        <div class="label">Option 2 — Deep Navy</div>
+        <div class="name">Sravan Kumar Sanathanam</div>
+        <div class="title">PhD Researcher · Alabama A&M University</div>
+        <div class="bio">Plant genomics researcher specialising in RNA-seq, microbiome profiling, and multi-omics analysis for crop improvement.</div>
+        <div class="tags">
+          <span class="tag">RNA-seq</span>
+          <span class="tag">DESeq2</span>
+          <span class="tag">QIIME2</span>
+          <span class="tag">CRISPR</span>
+        </div>
+        <span class="btn btn-solid">View Research</span>
+        <span class="btn btn-outline">Contact Me</span>
+      </div>
+    </div>
+
+    <!-- Theme 3 -->
+    <div class="card">
+      <div class="theme-bar">
+        <span class="t3-bar"></span><span class="t3-bar2"></span><span class="t3-bar3"></span>
+      </div>
+      <div class="preview t3">
+        <div class="label">Option 3 — Teal</div>
+        <div class="name">Sravan Kumar Sanathanam</div>
+        <div class="title">PhD Researcher · Alabama A&M University</div>
+        <div class="bio">Plant genomics researcher specialising in RNA-seq, microbiome profiling, and multi-omics analysis for crop improvement.</div>
+        <div class="tags">
+          <span class="tag">RNA-seq</span>
+          <span class="tag">DESeq2</span>
+          <span class="tag">QIIME2</span>
+          <span class="tag">CRISPR</span>
+        </div>
+        <span class="btn btn-solid">View Research</span>
+        <span class="btn btn-outline">Contact Me</span>
+      </div>
+    </div>
+
+    <!-- Theme 4 -->
+    <div class="card">
+      <div class="theme-bar">
+        <span class="t4-bar"></span><span class="t4-bar2"></span><span class="t4-bar3"></span>
+      </div>
+      <div class="preview t4">
+        <div class="label">Option 4 — Emerald</div>
+        <div class="name">Sravan Kumar Sanathanam</div>
+        <div class="title">PhD Researcher · Alabama A&M University</div>
+        <div class="bio">Plant genomics researcher specialising in RNA-seq, microbiome profiling, and multi-omics analysis for crop improvement.</div>
+        <div class="tags">
+          <span class="tag">RNA-seq</span>
+          <span class="tag">DESeq2</span>
+          <span class="tag">QIIME2</span>
+          <span class="tag">CRISPR</span>
+        </div>
+        <span class="btn btn-solid">View Research</span>
+        <span class="btn btn-outline">Contact Me</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
