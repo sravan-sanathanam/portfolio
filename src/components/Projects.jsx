@@ -7,9 +7,7 @@ function PillList({ label, items }) {
     <div className={styles.pillBlock}>
       <div className={styles.pillLabel}>{label}</div>
       <div className={styles.pills}>
-        {items.map(item => (
-          <span key={item} className={styles.pill}>{item}</span>
-        ))}
+        {items.map(item => <span key={item} className={styles.pill}>{item}</span>)}
       </div>
     </div>
   )
@@ -18,20 +16,20 @@ function PillList({ label, items }) {
 export default function Projects() {
   return (
     <section id="projects" className={styles.section}>
-      <p className={styles.eyebrow}>Projects</p>
-      <h2 className={styles.title}>Portfolio Case Studies</h2>
-      <p className={styles.intro}>
-        Selected projects showing the full research path: biological question,
-        experimental design, sequencing data, R/Linux analysis, visualization,
-        and interpretation.
-      </p>
-
+      <div className={styles.header}>
+        <p className="eyebrow">Projects</p>
+        <h2 className={styles.title}>Portfolio Case Studies</h2>
+        <p className={styles.intro}>
+          Selected projects showing the full research path: biological question,
+          experimental design, sequencing data, R/Linux analysis, visualization, and interpretation.
+        </p>
+      </div>
       <div className={styles.grid}>
         {projects.map((project, index) => (
           <article key={project.title} className={styles.card}>
             <div className={styles.topline}>
               <span className={styles.index}>{String(index + 1).padStart(2, '0')}</span>
-              <span className={styles.type}>{project.type}</span>
+              <span className={styles.type}>{project.type.split('/')[0].trim()}</span>
             </div>
             <h3 className={styles.cardTitle}>{project.title}</h3>
             <p className={styles.question}>{project.question}</p>

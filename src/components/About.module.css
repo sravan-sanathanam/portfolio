@@ -1,32 +1,86 @@
 .about {
-  padding: 4.5rem 2.5rem;
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 0.5px solid var(--border);
 }
 
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.67rem;
-  letter-spacing: 0.16em;
-  color: var(--green-400);
-  text-transform: uppercase;
-  margin-bottom: 0.85rem;
+.left {
+  padding: 4rem 2.5rem;
+  border-right: 0.5px solid var(--border);
 }
 
 .title {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  color: var(--text-primary);
-  margin-bottom: 1.25rem;
-  line-height: 1.2;
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--wht);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
 }
 
+.title span { color: var(--lime); }
+
 .body {
-  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--wht2);
   line-height: 1.85;
-  font-size: 0.97rem;
   margin-bottom: 1rem;
 }
 
+.right {
+  padding: 4rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tableLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--lime);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 0.5px solid var(--border);
+}
+.row:last-child { border-bottom: none; }
+
+.rowIdx {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--lime);
+  min-width: 20px;
+  padding-top: 2px;
+}
+
+.rowKey {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--wht3);
+  min-width: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-top: 2px;
+}
+
+.rowVal {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--wht);
+  line-height: 1.5;
+}
+
 @media (max-width: 720px) {
-  .about { padding: 3rem 1.25rem; }
+  .about { grid-template-columns: 1fr; }
+  .left { padding: 3rem 1.25rem; border-right: none; border-bottom: 0.5px solid var(--border); }
+  .right { padding: 3rem 1.25rem; }
 }

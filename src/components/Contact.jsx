@@ -3,39 +3,74 @@ import { personal } from '../data/content'
 import styles from './Contact.module.css'
 
 const links = [
-  { icon: 'ti-mail',           label: 'Email',         href: `mailto:${personal.email}` },
-  { icon: 'ti-brand-linkedin', label: 'LinkedIn',      href: personal.linkedin },
-  { icon: 'ti-brand-github',   label: 'GitHub',        href: personal.github },
-  { icon: 'ti-book',           label: 'Google Scholar',href: personal.scholar },
-  { icon: 'ti-id',             label: 'ORCID',         href: personal.orcid },
-  { icon: 'ti-file-text',      label: 'Download CV',   href: personal.cvUrl, download: true },
+  { icon: 'ti-mail',           label: 'Email',          href: `mailto:${personal.email}` },
+  { icon: 'ti-brand-linkedin', label: 'LinkedIn',        href: personal.linkedin },
+  { icon: 'ti-brand-github',   label: 'GitHub',          href: personal.github },
+  { icon: 'ti-book',           label: 'Google Scholar',  href: personal.scholar },
+  { icon: 'ti-id',             label: 'ORCID',           href: personal.orcid },
+]
+
+const openTo = [
+  'Postdoctoral research positions',
+  'Industry roles in agri-biotech or genomics',
+  'Collaborative plant multi-omics projects',
+  'Always happy to discuss science & data',
 ]
 
 export default function Contact() {
   return (
     <section id="contact" className={styles.section}>
-      <p className={styles.eyebrow}>Contact</p>
-      <h2 className={styles.title}>Let's Connect</h2>
-      <p className={styles.body}>
-        Open to postdoctoral positions, industry research roles in agri-biotech
-        or genomics, and collaborative projects in plant multi-omics. Always
-        happy to discuss science, data, or plants.
-      </p>
+      <div className={styles.left}>
+        <p className="eyebrow">Contact</p>
+        <h2 className={styles.title}>Let's<br /><span>Connect</span></h2>
+        <p className={styles.body}>
+          Open to postdoctoral positions, industry research roles in agri-biotech
+          or genomics, and collaborative projects in plant multi-omics.
+        </p>
+        <div className={styles.links}>
+          {links.map(l => (
+            <a
+              key={l.label}
+              href={l.href}
+              className={styles.btn}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={styles.btnInner}>
+                <i className={`ti ${l.icon}`} aria-hidden="true" />
+                {l.label}
+              </span>
+              <span className={styles.btnArrow}>→</span>
+            </a>
+          ))}
+        </div>
+      </div>
 
-      <div className={styles.links}>
-        {links.map(l => (
-          <a
-            key={l.label}
-            href={l.href}
-            className={styles.btn}
-            target={l.download ? undefined : '_blank'}
-            rel="noopener noreferrer"
-            download={l.download ? true : undefined}
-          >
-            <i className={`ti ${l.icon}`} aria-hidden="true" />
-            {l.label}
+      <div className={styles.right}>
+        <div>
+          <div className={styles.openToLabel}>Open to</div>
+          <div className={styles.openToItems}>
+            {openTo.map(item => (
+              <div key={item} className={styles.openToItem}>
+                <div className={styles.dot} />
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.cvBlock}>
+          <div className={styles.cvIcon}>
+            <i className="ti ti-file-text" aria-hidden="true" />
+          </div>
+          <div className={styles.cvText}>
+            <div className={styles.cvLabel}>Curriculum Vitae</div>
+            <div className={styles.cvSub}>Download PDF · Updated 2025</div>
+          </div>
+          <a href={personal.cvUrl} className={styles.cvBtn} download>
+            Download
           </a>
-        ))}
+        </div>
       </div>
     </section>
   )

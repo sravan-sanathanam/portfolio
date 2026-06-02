@@ -1,6 +1,6 @@
 .footer {
-  padding: 1.75rem 2.5rem;
-  border-top: 0.5px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 2.5rem;
+  border-top: 0.5px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,17 +9,20 @@
 }
 
 .name {
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  color: rgba(151, 196, 89, 0.5);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--lime);
+  letter-spacing: 0.04em;
 }
 
 .note {
-  font-size: 0.72rem;
-  color: var(--text-muted);
   font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--wht3);
+  letter-spacing: 0.1em;
 }
 
 @media (max-width: 720px) {
-  .footer { padding: 1.25rem; }
+  .footer { padding: 1.25rem; flex-direction: column; align-items: flex-start; }
 }

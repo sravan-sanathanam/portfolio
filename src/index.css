@@ -5,50 +5,54 @@
 }
 
 :root {
-  --bg-base: #ffffff;
-  --bg-card: rgba(58, 125, 30, 0.04);
-  --bg-card-hover: rgba(58, 125, 30, 0.08);
-  --bg-stat: rgba(58, 125, 30, 0.07);
-  --border: rgba(0, 0, 0, 0.08);
-  --border-green: rgba(58, 125, 30, 0.25);
-  --border-green-hover: rgba(58, 125, 30, 0.45);
-  --green-400: #3a7d1e;
-  --green-500: #2d6217;
-  --green-300: #6ab04c;
-  --green-200: #8fcc6a;
-  --green-100: #c8e6b0;
-  --text-primary: #1a2e0f;
-  --text-secondary: rgba(26, 46, 15, 0.65);
-  --text-muted: rgba(26, 46, 15, 0.4);
-  --text-accent: #3a7d1e;
-  --font-serif: 'DM Serif Display', serif;
-  --font-mono: 'DM Mono', monospace;
-  --font-sans: 'Instrument Sans', sans-serif;
+  --blk:        #0a0a0a;
+  --blk2:       #111111;
+  --blk3:       #1a1a1a;
+  --blk4:       #242424;
+  --blk5:       #2e2e2e;
+  --lime:       #b8f400;
+  --lime-dim:   rgba(184,244,0,0.10);
+  --lime-dim2:  rgba(184,244,0,0.05);
+  --lime-border:rgba(184,244,0,0.22);
+  --lime-border-hover: rgba(184,244,0,0.5);
+  --wht:        #f0f0eb;
+  --wht2:       rgba(240,240,235,0.60);
+  --wht3:       rgba(240,240,235,0.32);
+  --wht4:       rgba(240,240,235,0.12);
+  --border:     rgba(240,240,235,0.07);
+  --border2:    rgba(240,240,235,0.13);
+
+  --font-head: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'Inter', sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--font-sans);
-  background: var(--bg-base);
-  color: var(--text-primary);
+  font-family: var(--font-body);
+  background: var(--blk);
+  color: var(--wht);
   overflow-x: hidden;
   line-height: 1.6;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f5f5f5; }
-::-webkit-scrollbar-thumb { background: var(--green-400); border-radius: 3px; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--blk2); }
+::-webkit-scrollbar-thumb { background: var(--lime); border-radius: 2px; }
 
-/* Fade-in animation */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+.fade-up { animation: fadeUp 0.6s ease forwards; }
 
-.fade-up {
-  animation: fadeUp 0.6s ease forwards;
+/* shared eyebrow label */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  color: var(--lime);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
 }
