@@ -5,9 +5,10 @@ import styles from './Publications.module.css'
 export default function Publications() {
   return (
     <section id="publications" className={styles.section}>
-      <p className={styles.eyebrow}>Publications</p>
-      <h2 className={styles.title}>Selected Work</h2>
-
+      <div className={styles.header}>
+        <p className="eyebrow">Publications</p>
+        <h2 className={styles.title}>Selected Work</h2>
+      </div>
       <div className={styles.list}>
         {publications.map((pub, i) => (
           <a

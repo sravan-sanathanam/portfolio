@@ -8,34 +8,42 @@ export default function Hero() {
       <div className={styles.left}>
         <span className={styles.tag}>
           <span className={styles.tagDot} />
-          {personal.title} · Plant Molecular Biology
+          {personal.title}
         </span>
-
         <h1 className={styles.name}>
           Plant Genomics,<br />
           Transcriptomics &amp;<br />
           <em>Multi-Omics</em>
         </h1>
-
         <p className={styles.sub}>
           Integrating wet-lab molecular biology with large-scale RNA-seq,
           microbiome profiling, and functional genomics to decode how plants
           respond to stress — from gene to ecosystem.
         </p>
-
         <div className={styles.pills}>
           {heroPills.map(p => (
             <span key={p} className={styles.pill}>{p}</span>
           ))}
         </div>
-
         <div className={styles.btns}>
-          <a href="#research" className={styles.btnPrimary}>View Research</a>
+          <a href="#research" className={styles.btnPrimary}>View Research ↗</a>
           <a href="#contact"  className={styles.btnOutline}>Get in Touch</a>
         </div>
       </div>
 
       <div className={styles.right}>
+        <div className={styles.profileArea}>
+          <div className={styles.avatar}>
+            <span className={styles.avatarInitials}>SKS</span>
+            <div className={styles.avatarBadge} />
+          </div>
+          <div>
+            <div className={styles.profileName}>{personal.name}</div>
+            <div className={styles.profileRole}>PhD Candidate · Plant &amp; Soil Science</div>
+            <div className={styles.profileLoc}>📍 {personal.institution}</div>
+          </div>
+        </div>
+
         <div className={styles.statGrid}>
           {stats.map(s => (
             <div key={s.label} className={styles.statCard}>
@@ -52,9 +60,7 @@ export default function Hero() {
               {wf.steps.map((step, i) => (
                 <React.Fragment key={step}>
                   <span className={styles.wfStep}>{step}</span>
-                  {i < wf.steps.length - 1 && (
-                    <span className={styles.wfArrow}>›</span>
-                  )}
+                  {i < wf.steps.length - 1 && <span className={styles.wfArrow}>›</span>}
                 </React.Fragment>
               ))}
             </div>

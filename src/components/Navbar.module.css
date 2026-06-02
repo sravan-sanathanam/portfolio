@@ -2,44 +2,38 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 2.5rem;
-  border-bottom: 0.5px solid rgba(99, 153, 34, 0.12);
+  padding: 1rem 2.5rem;
+  border-bottom: 0.5px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(16px);
   transition: border-color 0.3s;
 }
 
-.scrolled {
-  border-color: rgba(99, 153, 34, 0.25);
-}
+.scrolled { border-color: var(--lime-border); }
 
 .logo {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  color: var(--text-accent);
-  letter-spacing: 0.02em;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--lime);
+  letter-spacing: 0.04em;
 }
 
-.links {
-  display: flex;
-  gap: 1.75rem;
-}
+.links { display: flex; gap: 2rem; }
 
 .link {
-  font-size: 0.78rem;
-  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--wht3);
   text-decoration: none;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   transition: color 0.2s;
 }
-
-.link:hover {
-  color: var(--text-accent);
-}
+.link:hover { color: var(--lime); }
 
 .menuBtn {
   display: none;
@@ -51,52 +45,44 @@
 
 .menuIcon {
   display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text-muted);
+  width: 22px; height: 2px;
+  background: var(--wht3);
   position: relative;
   transition: background 0.2s;
 }
-
 .menuIcon::before,
 .menuIcon::after {
   content: '';
   display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text-muted);
+  width: 22px; height: 2px;
+  background: var(--wht3);
   position: absolute;
   transition: transform 0.2s;
 }
-
 .menuIcon::before { top: -7px; }
 .menuIcon::after  { top:  7px; }
 
 .mobileMenu {
   position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.98);
-  border-bottom: 0.5px solid rgba(99, 153, 34, 0.2);
+  top: 100%; left: 0; right: 0;
+  background: var(--blk2);
+  border-bottom: 0.5px solid var(--lime-border);
   display: flex;
   flex-direction: column;
-  padding: 1rem 2.5rem;
-  gap: 1rem;
+  padding: 1.25rem 2.5rem;
+  gap: 1.1rem;
 }
 
 .mobileLink {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--wht2);
   text-decoration: none;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: color 0.2s;
 }
-
-.mobileLink:hover {
-  color: var(--text-accent);
-}
+.mobileLink:hover { color: var(--lime); }
 
 @media (max-width: 720px) {
   .nav { padding: 1rem 1.25rem; }

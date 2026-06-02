@@ -9,9 +9,7 @@ function SkillCard({ icon, title, desc, tags }) {
       <div className={styles.cardTitle}>{title}</div>
       {desc && <p className={styles.cardDesc}>{desc}</p>}
       <div className={styles.tags}>
-        {tags.map(t => (
-          <span key={t} className={styles.tag}>{t}</span>
-        ))}
+        {tags.map(t => <span key={t} className={styles.tag}>{t}</span>)}
       </div>
     </div>
   )
@@ -23,9 +21,10 @@ export default function Skills() {
 
   return (
     <section id="skills" className={styles.section}>
-      <p className={styles.eyebrow}>Skills &amp; Toolkit</p>
-      <h2 className={styles.title}>Expertise</h2>
-
+      <p className="eyebrow">Skills &amp; Toolkit</p>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Expertise</h2>
+      </div>
       <div className={styles.tabs}>
         {skillTabs.map(tab => (
           <button
@@ -37,11 +36,8 @@ export default function Skills() {
           </button>
         ))}
       </div>
-
       <div className={styles.grid}>
-        {current.cards.map(card => (
-          <SkillCard key={card.title} {...card} />
-        ))}
+        {current.cards.map(card => <SkillCard key={card.title} {...card} />)}
       </div>
     </section>
   )
