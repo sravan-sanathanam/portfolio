@@ -441,6 +441,38 @@ export const skillTabs = [
   },
 ]
 
+export const awards = [
+  { year: '2025', title: 'Black Tie Gala Scholarship', org: 'Alabama A&M University', amount: '$2,000' },
+  { year: '2024', title: 'Graduate Oral Competition – 2nd Place', org: 'AAMU STEM DAY 2024', amount: '$150' },
+  { year: '2023–24', title: 'EPSCoR Graduate Research Scholars Program (GRSP)', org: 'Alabama EPSCoR', amount: '$18,750/yr' },
+  { year: '2023', title: '3rd Place – Poster Presentation', org: 'ACMAP 12th Annual Conference', amount: '$100' },
+  { year: '2023', title: 'Travel Grant', org: 'ASHS Annual Conference', amount: '$500' },
+  { year: '2023', title: '3 Minute Thesis – 3rd Place', org: 'AAMU STEM DAY 2023', amount: '$150' },
+  { year: '2023', title: 'NRE Department Scholarship (4.0 GPA)', org: 'Alabama A&M University', amount: '$5,000' },
+  { year: '2016–20', title: 'Post Matric Merit Scholarship', org: 'Telangana State Government', amount: '$2,400' },
+]
+
+export const teaching = [
+  {
+    term: 'Spring 2024',
+    role: 'Teaching Assistant',
+    course: 'NRE 199 – Technology in Agricultural & Biological Sciences',
+    institution: 'Alabama A&M University',
+    instructor: 'Dr. Srinivasa Rao Mentreddy',
+    students: 25,
+    note: 'Introductory course for freshmen in Agricultural Sciences covering report writing, data analysis, presentations, GIS, statistics, and precision agriculture.',
+  },
+]
+
+export const service = [
+  {
+    year: '2023',
+    role: 'Session Moderator',
+    event: 'Technology Applications in Horticulture – Poster Session',
+    org: 'ASHS Annual Conference, Orlando FL',
+  },
+]
+
 export const publications = [
   {
     year: '2025',

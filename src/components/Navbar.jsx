@@ -12,7 +12,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const links = ['About', 'Skills', 'Research', 'Publications', 'Contact']
+  const links = ['About', 'Skills', 'Research', 'Publications', 'Awards', 'Contact']
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
