@@ -123,68 +123,46 @@
   overflow: hidden;
 }
 
-/* Glowing orb decoration */
-.glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(6, 182, 212, 0.12) 0%,
-    rgba(8, 145, 178, 0.07) 40%,
-    transparent 70%
-  );
-  pointer-events: none;
-  animation: pulse 4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
-  50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1.08); }
-}
-
-/* Stats grid on the right */
-.orbGrid {
+/* DNA helix container — fills the right panel above the profile card */
+.helixWrap {
   flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--border);
-  margin: 2rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
   position: relative;
-  z-index: 1;
+  overflow: hidden;
+  min-height: 0;
 }
 
-.orbCard {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  padding: 1.5rem;
-  background: rgba(2, 12, 16, 0.7);
-  backdrop-filter: blur(12px);
-  transition: background 0.2s;
+/* Floating genomics labels over the helix */
+.helixLabel {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: rgba(34, 211, 238, 0.55);
+  text-transform: uppercase;
+  pointer-events: none;
+  white-space: nowrap;
+  animation: labelPulse 4s ease-in-out infinite;
 }
-.orbCard:hover { background: rgba(6, 182, 212, 0.08); }
+.helixLabel:nth-child(2) { animation-delay: 0.8s; }
+.helixLabel:nth-child(3) { animation-delay: 1.6s; }
+.helixLabel:nth-child(4) { animation-delay: 2.4s; }
+.helixLabel:nth-child(5) { animation-delay: 3.2s; }
 
-.orbVal {
-  font-family: var(--font-head);
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--cyan-light);
-  line-height: 1.2;
+@keyframes labelPulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
 }
 
-.orbLabel {
-  font-size: 0.72rem;
-  color: var(--text-subtle);
-  line-height: 1.4;
+/* Gradient fade at the bottom so the helix bleeds into the profile card */
+.helixFade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, rgba(2, 12, 16, 0.85));
+  pointer-events: none;
 }
 
 /* Profile card */
@@ -194,10 +172,11 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(4, 20, 24, 0.8);
+  background: rgba(4, 20, 24, 0.85);
   backdrop-filter: blur(12px);
   position: relative;
   z-index: 1;
+  flex-shrink: 0;
 }
 
 .avatar {

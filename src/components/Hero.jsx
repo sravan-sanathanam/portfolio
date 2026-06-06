@@ -1,5 +1,6 @@
 import React from 'react'
 import { personal, heroPills } from '../data/content'
+import DnaHelix from './DnaHelix'
 import styles from './Hero.module.css'
 
 const statsBar = [
@@ -7,6 +8,14 @@ const statsBar = [
   { val: '6',            label: 'Research Projects' },
   { val: 'RNA-seq · 16S/ITS', label: 'Sequencing Workflows' },
   { val: 'R · Linux',   label: 'Analysis Environment' },
+]
+
+const helixLabels = [
+  { text: 'RNA-seq', top: '14%',  left: '8%'  },
+  { text: 'DESeq2',  top: '28%',  right: '10%' },
+  { text: '16S rRNA', top: '48%', left: '6%'  },
+  { text: 'QIIME2',  top: '64%',  right: '8%' },
+  { text: 'PICRUSt2', top: '78%', left: '10%' },
 ]
 
 export default function Hero() {
@@ -37,15 +46,20 @@ export default function Hero() {
         </div>
 
         <div className={styles.right}>
-          <div className={styles.glow} />
-          <div className={styles.orbGrid}>
-            {statsBar.map((s, i) => (
-              <div key={i} className={styles.orbCard}>
-                <span className={styles.orbVal}>{s.val}</span>
-                <span className={styles.orbLabel}>{s.label}</span>
+          <div className={styles.helixWrap}>
+            <DnaHelix />
+            {helixLabels.map((l, i) => (
+              <div
+                key={i}
+                className={styles.helixLabel}
+                style={{ top: l.top, left: l.left, right: l.right }}
+              >
+                {l.text}
               </div>
             ))}
+            <div className={styles.helixFade} />
           </div>
+
           <div className={styles.profileCard}>
             <div className={styles.avatar}>SKS</div>
             <div>
