@@ -1,160 +1,152 @@
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 0.5px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .left {
   padding: 4rem 2.5rem;
-  border-right: 0.5px solid var(--border);
+  border-right: 1px solid var(--border);
 }
 
 .title {
   font-family: var(--font-head);
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  color: var(--wht);
-  line-height: 1.05;
-  letter-spacing: -0.025em;
+  color: var(--text);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   margin-bottom: 1rem;
 }
 
-.title span { color: var(--lime); }
+.title span { color: var(--green); }
 
 .body {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--wht2);
+  font-size: 0.92rem;
+  color: var(--text-muted);
   line-height: 1.8;
   max-width: 420px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
 }
 
-.links { display: flex; flex-direction: column; gap: 0.6rem; }
+.links { display: flex; flex-direction: column; gap: 0.5rem; }
 
 .btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 1.1rem;
-  border: 0.5px solid var(--border2);
-  border-radius: 2px;
-  color: var(--wht);
+  padding: 0.9rem 1.25rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
   text-decoration: none;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 0.88rem;
+  font-weight: 500;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 .btn:hover {
-  border-color: var(--lime-border-hover);
-  color: var(--lime);
-  background: var(--lime-dim2);
+  border-color: var(--green-border);
+  color: var(--green);
+  background: var(--green-surface);
 }
 
-.btnInner { display: flex; align-items: center; gap: 0.6rem; }
-.btnInner i { font-size: 15px; color: var(--lime); }
-.btnArrow { font-size: 14px; color: var(--lime); opacity: 0.5; transition: opacity 0.2s; }
-.btn:hover .btnArrow { opacity: 1; }
+.btnInner { display: flex; align-items: center; gap: 0.65rem; }
+.btnInner i { font-size: 16px; color: var(--green); }
+.btnArrow { font-size: 14px; color: var(--text-subtle); transition: color 0.2s, transform 0.2s; }
+.btn:hover .btnArrow { color: var(--green); transform: translateX(3px); }
 
 /* Right */
 .right {
   padding: 4rem 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
+  background: var(--bg-alt);
 }
 
 .openToLabel {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  color: var(--lime);
-  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-subtle);
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin-bottom: 1rem;
 }
 
-.openToItems { display: flex; flex-direction: column; gap: 0.7rem; }
+.openToItems { display: flex; flex-direction: column; gap: 0.75rem; }
 
 .openToItem {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: var(--font-body);
-  font-size: 0.88rem;
-  color: var(--wht2);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
 .dot {
-  width: 4px; height: 4px;
+  width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--lime);
+  background: var(--green);
   flex-shrink: 0;
 }
 
 .cvBlock {
   padding: 1.25rem 1.5rem;
-  border: 0.5px solid var(--lime-border);
-  border-radius: 2px;
-  background: var(--lime-dim2);
+  border: 1.5px solid var(--green-border);
+  border-radius: var(--radius-md);
+  background: var(--green-surface);
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
 .cvIcon {
-  width: 38px; height: 38px;
-  border: 0.5px solid var(--lime-border);
-  border-radius: 2px;
+  width: 40px; height: 40px;
+  border-radius: var(--radius-sm);
+  background: #fff;
+  border: 1px solid var(--green-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--lime-dim);
   flex-shrink: 0;
 }
-.cvIcon i { font-size: 16px; color: var(--lime); }
+.cvIcon i { font-size: 18px; color: var(--green); }
 
 .cvText { flex: 1; }
 
 .cvLabel {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--wht);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: var(--text);
   margin-bottom: 0.2rem;
 }
 
 .cvSub {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  color: var(--wht3);
+  font-size: 0.76rem;
+  color: var(--text-muted);
 }
 
 .cvBtn {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: var(--lime);
-  color: var(--blk);
+  font-size: 0.84rem;
+  font-weight: 600;
+  background: var(--green);
+  color: #fff;
   border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 2px;
+  padding: 0.62rem 1.1rem;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
-  transition: opacity 0.2s;
+  transition: background 0.2s;
 }
-.cvBtn:hover { opacity: 0.85; }
+.cvBtn:hover { background: var(--green-mid); }
 
 @media (max-width: 720px) {
   .section { grid-template-columns: 1fr; }
-  .left { padding: 3rem 1.25rem; border-right: none; border-bottom: 0.5px solid var(--border); }
-  .right { padding: 3rem 1.25rem; }
+  .left { padding: 3rem 1.5rem; border-right: none; border-bottom: 1px solid var(--border); }
+  .right { padding: 3rem 1.5rem; }
   .title { font-size: 2.2rem; }
 }
