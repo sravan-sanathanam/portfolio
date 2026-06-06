@@ -12,7 +12,7 @@ export const personal = {
   github: 'https://github.com/sravan-sanathanam',
   scholar: 'https://scholar.google.com/citations?user=t2o9yU8AAAAJ&hl=en',
   orcid: 'https://orcid.org/0009-0002-8192-8400',
-  cvUrl: '/cv.pdf',
+  cvUrl: '/cv.docx',
 }
 
 export const stats = [
