@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-      <span className={styles.logo}>SKS_</span>
+      <span className={styles.logo}>Sravan Kumar Sanathanam</span>
       <div className={styles.links}>
         {links.map(l => (
           <a key={l} href={`#${l.toLowerCase()}`} className={styles.link}>{l}</a>

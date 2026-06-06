@@ -1,47 +1,47 @@
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 0.5px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .left {
-  padding: 4rem 2.5rem;
-  border-right: 0.5px solid var(--border);
+  padding: 4rem 3rem 4rem 2.5rem;
+  border-right: 1px solid var(--border);
 }
 
 .title {
   font-family: var(--font-head);
   font-size: 2.2rem;
   font-weight: 700;
-  color: var(--wht);
-  line-height: 1.1;
+  color: var(--text);
+  line-height: 1.15;
   letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
-.title span { color: var(--lime); }
+.title span { color: var(--green); }
 
 .body {
-  font-family: var(--font-body);
-  font-size: 0.92rem;
-  color: var(--wht2);
-  line-height: 1.85;
-  margin-bottom: 1rem;
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 1.1rem;
+  max-width: 580px;
 }
 
 .right {
   padding: 4rem 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  background: var(--bg-alt);
 }
 
 .tableLabel {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  color: var(--lime);
-  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-subtle);
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin-bottom: 1.25rem;
 }
 
@@ -49,38 +49,38 @@
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 0.5px solid var(--border);
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border-light);
 }
 .row:last-child { border-bottom: none; }
 
 .rowIdx {
   font-family: var(--font-mono);
-  font-size: 0.6rem;
-  color: var(--lime);
-  min-width: 20px;
+  font-size: 0.65rem;
+  color: var(--green);
+  min-width: 22px;
   padding-top: 2px;
 }
 
 .rowKey {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  color: var(--wht3);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-subtle);
   min-width: 100px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   padding-top: 2px;
 }
 
 .rowVal {
-  font-family: var(--font-body);
-  font-size: 0.88rem;
-  color: var(--wht);
+  font-size: 0.9rem;
+  color: var(--text);
   line-height: 1.5;
+  font-weight: 500;
 }
 
 @media (max-width: 720px) {
   .about { grid-template-columns: 1fr; }
-  .left { padding: 3rem 1.25rem; border-right: none; border-bottom: 0.5px solid var(--border); }
-  .right { padding: 3rem 1.25rem; }
+  .left { padding: 3rem 1.5rem; border-right: none; border-bottom: 1px solid var(--border); }
+  .right { padding: 3rem 1.5rem; }
 }

@@ -5,41 +5,53 @@
 }
 
 :root {
-  --blk:        #0a0a0a;
-  --blk2:       #111111;
-  --blk3:       #1a1a1a;
-  --blk4:       #242424;
-  --blk5:       #2e2e2e;
-  --lime:       #b8f400;
-  --lime-dim:   rgba(184,244,0,0.10);
-  --lime-dim2:  rgba(184,244,0,0.05);
-  --lime-border:rgba(184,244,0,0.22);
-  --lime-border-hover: rgba(184,244,0,0.5);
-  --wht:        #f0f0eb;
-  --wht2:       rgba(240,240,235,0.60);
-  --wht3:       rgba(240,240,235,0.32);
-  --wht4:       rgba(240,240,235,0.12);
-  --border:     rgba(240,240,235,0.07);
-  --border2:    rgba(240,240,235,0.13);
+  --bg:            #ffffff;
+  --bg-alt:        #f8fafc;
+  --surface:       #ffffff;
 
-  --font-head: 'Space Grotesk', sans-serif;
-  --font-mono: 'Space Mono', monospace;
-  --font-body: 'Inter', sans-serif;
+  --text:          #0f172a;
+  --text-muted:    #64748b;
+  --text-subtle:   #94a3b8;
+
+  --green:         #166534;
+  --green-mid:     #15803d;
+  --green-light:   #16a34a;
+  --green-surface: #f0fdf4;
+  --green-border:  #bbf7d0;
+  --green-dim:     rgba(22, 101, 52, 0.07);
+
+  --border:        #e2e8f0;
+  --border-light:  #f1f5f9;
+
+  --shadow-sm:     0 1px 4px rgba(15, 23, 42, 0.06);
+  --shadow-md:     0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-lg:     0 8px 32px rgba(15, 23, 42, 0.12);
+
+  --font-serif: 'Lora', Georgia, serif;
+  --font-head:  'Space Grotesk', sans-serif;
+  --font-body:  'Inter', sans-serif;
+  --font-mono:  'Space Mono', monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
-  background: var(--blk);
-  color: var(--wht);
+  background: var(--bg);
+  color: var(--text);
   overflow-x: hidden;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--blk2); }
-::-webkit-scrollbar-thumb { background: var(--lime); border-radius: 2px; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-alt); }
+::-webkit-scrollbar-thumb { background: var(--green-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--green-light); }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -47,12 +59,12 @@ body {
 }
 .fade-up { animation: fadeUp 0.6s ease forwards; }
 
-/* shared eyebrow label */
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  color: var(--lime);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--green);
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
 }
