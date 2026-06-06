@@ -5,27 +5,27 @@
 }
 
 :root {
-  --bg:            #ffffff;
-  --bg-alt:        #f8fafc;
-  --surface:       #ffffff;
+  --bg:            #020c10;
+  --bg-alt:        rgba(4, 20, 24, 0.75);
+  --surface:       rgba(6, 182, 212, 0.04);
 
-  --text:          #0f172a;
-  --text-muted:    #64748b;
-  --text-subtle:   #94a3b8;
+  --text:          #ecfeff;
+  --text-muted:    #a5f3fc;
+  --text-subtle:   #67e8f9;
 
-  --green:         #166534;
-  --green-mid:     #15803d;
-  --green-light:   #16a34a;
-  --green-surface: #f0fdf4;
-  --green-border:  #bbf7d0;
-  --green-dim:     rgba(22, 101, 52, 0.07);
+  --cyan:          #06b6d4;
+  --cyan-mid:      #0891b2;
+  --cyan-light:    #22d3ee;
+  --cyan-surface:  rgba(6, 182, 212, 0.08);
+  --cyan-border:   rgba(6, 182, 212, 0.28);
+  --cyan-dim:      rgba(6, 182, 212, 0.05);
 
-  --border:        #e2e8f0;
-  --border-light:  #f1f5f9;
+  --border:        rgba(6, 182, 212, 0.15);
+  --border-light:  rgba(6, 182, 212, 0.08);
 
-  --shadow-sm:     0 1px 4px rgba(15, 23, 42, 0.06);
-  --shadow-md:     0 4px 16px rgba(15, 23, 42, 0.08);
-  --shadow-lg:     0 8px 32px rgba(15, 23, 42, 0.12);
+  --shadow-sm:     0 1px 8px rgba(6, 182, 212, 0.08);
+  --shadow-md:     0 4px 20px rgba(6, 182, 212, 0.12);
+  --shadow-lg:     0 8px 40px rgba(6, 182, 212, 0.18);
 
   --font-serif: 'Lora', Georgia, serif;
   --font-head:  'Space Grotesk', sans-serif;
@@ -49,9 +49,9 @@ body {
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-alt); }
-::-webkit-scrollbar-thumb { background: var(--green-border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--green-light); }
+::-webkit-scrollbar-track { background: #020c10; }
+::-webkit-scrollbar-thumb { background: rgba(6, 182, 212, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -64,7 +64,7 @@ body {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: var(--green);
+  color: var(--cyan);
   text-transform: uppercase;
   margin-bottom: 0.6rem;
 }

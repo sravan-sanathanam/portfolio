@@ -6,7 +6,8 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  background: var(--bg-alt);
+  background: rgba(2, 12, 16, 0.9);
+  backdrop-filter: blur(16px);
 }
 
 .name {
