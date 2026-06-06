@@ -1,13 +1,12 @@
 import React from 'react'
 import { personal, heroPills } from '../data/content'
 import styles from './Hero.module.css'
-import DNAHelix from './DNAHelix'
 
 const statsBar = [
   { val: 'Ph.D. + M.S.', label: 'Degrees in Plant Science' },
-  { val: '6', label: 'Research Projects' },
-  { val: 'RNA-seq + 16S/ITS', label: 'Sequencing Workflows' },
-  { val: 'R + Linux', label: 'Analysis Environment' },
+  { val: '6',            label: 'Research Projects' },
+  { val: 'RNA-seq · 16S/ITS', label: 'Sequencing Workflows' },
+  { val: 'R · Linux',   label: 'Analysis Environment' },
 ]
 
 export default function Hero() {
@@ -38,8 +37,14 @@ export default function Hero() {
         </div>
 
         <div className={styles.right}>
-          <div className={styles.helixWrap}>
-            <DNAHelix />
+          <div className={styles.glow} />
+          <div className={styles.orbGrid}>
+            {statsBar.map((s, i) => (
+              <div key={i} className={styles.orbCard}>
+                <span className={styles.orbVal}>{s.val}</span>
+                <span className={styles.orbLabel}>{s.label}</span>
+              </div>
+            ))}
           </div>
           <div className={styles.profileCard}>
             <div className={styles.avatar}>SKS</div>

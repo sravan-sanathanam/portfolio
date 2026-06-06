@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid var(--border);
+  background: rgba(2, 12, 16, 0.72);
+  backdrop-filter: blur(8px);
 }
 
 .left {
@@ -19,7 +21,7 @@
   margin-bottom: 1.75rem;
 }
 
-.title span { color: var(--green); }
+.title span { color: var(--cyan); }
 
 .body {
   font-size: 0.94rem;
@@ -33,7 +35,7 @@
   padding: 4rem 2.5rem;
   display: flex;
   flex-direction: column;
-  background: var(--bg-alt);
+  background: rgba(4, 20, 24, 0.55);
 }
 
 .tableLabel {
@@ -57,7 +59,7 @@
 .rowIdx {
   font-family: var(--font-mono);
   font-size: 0.65rem;
-  color: var(--green);
+  color: var(--cyan);
   min-width: 22px;
   padding-top: 2px;
 }

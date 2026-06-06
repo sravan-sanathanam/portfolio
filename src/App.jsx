@@ -1,4 +1,5 @@
 import React from 'react'
+import ParticleCanvas from './components/ParticleCanvas'
 import Navbar       from './components/Navbar'
 import Hero         from './components/Hero'
 import About        from './components/About'
@@ -12,6 +13,7 @@ import Footer       from './components/Footer'
 export default function App() {
   return (
     <>
+      <ParticleCanvas />
       <Navbar />
       <main>
         <Hero />
