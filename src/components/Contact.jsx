@@ -67,7 +67,7 @@ export default function Contact() {
             <div className={styles.cvLabel}>Curriculum Vitae</div>
             <div className={styles.cvSub}>Download PDF · Updated 2025</div>
           </div>
-          <a href={personal.cvUrl} className={styles.cvBtn} download>
+          <a href={personal.cvUrl} className={styles.cvBtn} download="Sravan_Kumar_Sanathanam_CV.pdf">
             Download
           </a>
         </div>
