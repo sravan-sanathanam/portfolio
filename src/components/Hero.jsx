@@ -1,84 +1,41 @@
 import React from 'react'
-import { personal, heroPills } from '../data/content'
-import DnaHelix from './DnaHelix'
-import styles from './Hero.module.css'
+import { personal } from '../data/content'
 
-const statsBar = [
-  { val: 'Ph.D. + M.S.', label: 'Degrees in Plant Science' },
-  { val: '6',            label: 'Research Projects' },
-  { val: 'RNA-seq · 16S/ITS', label: 'Sequencing Workflows' },
-  { val: 'R · Linux',   label: 'Analysis Environment' },
-]
-
-const helixLabels = [
-  { text: 'RNA-seq', top: '14%',  left: '8%'  },
-  { text: 'DESeq2',  top: '28%',  right: '10%' },
-  { text: '16S rRNA', top: '48%', left: '6%'  },
-  { text: 'QIIME2',  top: '64%',  right: '8%' },
-  { text: 'PICRUSt2', top: '78%', left: '10%' },
+const facts = [
+  { key: 'Position', val: 'Ph.D. Student, Alabama A&M' },
+  { key: 'Minor', val: 'Bioinformatics' },
+  { key: 'Publications', val: '4 peer-reviewed · 5 in preparation' },
+  { key: 'Open to', val: 'Research scientist · Postdoc · Industry' },
 ]
 
 export default function Hero() {
   return (
-    <>
-      <section className={styles.hero}>
-        <div className={styles.left}>
-          <span className={styles.label}>Plant &amp; Soil Science · Ph.D. Candidate</span>
-          <h1 className={styles.heading}>
-            Decoding Plant Stress<br />
-            Through Genomics &amp;<br />
-            <em>Multi-Omics</em>
-          </h1>
-          <p className={styles.sub}>
-            Integrating transcriptomics, rhizosphere microbiome profiling, and
-            functional genomics to resolve how plants respond to biotic and
-            abiotic stress at the molecular level.
+    <section id="top" className="hero" aria-labelledby="hero-heading">
+      <div className="container">
+        <div>
+          <p className="hero-label">Plant Genomics · Multi-Omics · Crop Protection</p>
+          <h1 id="hero-heading">Understanding how cotton resists the reniform nematode</h1>
+          <p className="hero-text">
+            I compare susceptible and tolerant cotton genotypes under reniform
+            nematode pressure, combining RNA-seq with 16S/ITS rhizosphere
+            sequencing to find candidate defense genes and microbial
+            bioindicators for sustainable nematode management.
           </p>
-          <div className={styles.pills}>
-            {heroPills.map(p => (
-              <span key={p} className={styles.pill}>{p}</span>
-            ))}
-          </div>
-          <div className={styles.actions}>
-            <a href="#research" className={styles.btnPrimary}>View Research</a>
-            <a href={personal.cvUrl} className={styles.btnOutline} download="Sravan_Kumar_Sanathanam_CV.pdf">Download CV</a>
+          <div className="hero-actions">
+            <a href={personal.cvUrl} className="btn btn-primary" download="Sravan_Kumar_Sanathanam_CV.pdf">Download CV</a>
+            <a href={personal.scholar} className="btn btn-outline" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a href={personal.github} className="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
-
-        <div className={styles.right}>
-          <div className={styles.helixWrap}>
-            <DnaHelix />
-            {helixLabels.map((l, i) => (
-              <div
-                key={i}
-                className={styles.helixLabel}
-                style={{ top: l.top, left: l.left, right: l.right }}
-              >
-                {l.text}
-              </div>
-            ))}
-            <div className={styles.helixFade} />
-          </div>
-
-          <div className={styles.profileCard}>
-            <div className={styles.avatar}>SKS</div>
-            <div>
-              <div className={styles.profileName}>{personal.name}</div>
-              <div className={styles.profileRole}>Ph.D. Candidate · Plant &amp; Soil Science</div>
-              <div className={styles.profileInst}>{personal.institution}</div>
+        <dl className="facts">
+          {facts.map(f => (
+            <div key={f.key}>
+              <dt>{f.key}</dt>
+              <dd>{f.val}</dd>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <div className={styles.statsBar}>
-        {statsBar.map((s, i) => (
-          <div key={i} className={styles.statItem}>
-            <span className={styles.statVal}>{s.val}</span>
-            <span className={styles.statLabel}>{s.label}</span>
-          </div>
-        ))}
+          ))}
+        </dl>
       </div>
-    </>
+    </section>
   )
 }

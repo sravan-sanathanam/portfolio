@@ -1,59 +1,61 @@
 import React from 'react'
 import { awards, teaching, service } from '../data/content'
-import styles from './Awards.module.css'
 
 export default function Awards() {
   return (
-    <section id="awards" className={styles.section}>
-      <div className={styles.header}>
-        <p className="eyebrow">Recognition</p>
-        <h2 className={styles.title}>Honors, Teaching &amp; Service</h2>
-      </div>
+    <section id="awards" className="section" aria-labelledby="awards-heading">
+      <div className="container">
+        <p className="section-label">Recognition</p>
+        <h2 id="awards-heading">Honors, Teaching &amp; Service</h2>
+        <div className="two-col">
+          <div>
+            <h3 className="subhead">Awards &amp; Scholarships</h3>
+            <ul className="year-list with-amount">
+              {awards.map(a => (
+                <li key={a.title}>
+                  <span className="year">{a.year}</span>
+                  <div>
+                    <div className="item-title">{a.title}</div>
+                    <div className="item-sub">{a.org}</div>
+                  </div>
+                  {a.amount ? <span className="amount">{a.amount}</span> : <span />}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-      <div className={styles.body}>
-        <div className={styles.awardsList}>
-          <div className={styles.subHead}>Awards &amp; Scholarships</div>
-          {awards.map((a, i) => (
-            <div key={i} className={styles.awardItem}>
-              <span className={styles.year}>{a.year}</span>
-              <div className={styles.awardContent}>
-                <div className={styles.awardTitle}>{a.title}</div>
-                <div className={styles.awardOrg}>{a.org}</div>
+          <div>
+            <h3 className="subhead">Teaching</h3>
+            {teaching.map(t => (
+              <div key={t.course} className="entry">
+                <div className="entry-top">
+                  <span className="entry-role">{t.role}</span>
+                  <span className="entry-term">{t.term}</span>
+                </div>
+                <div className="item-title">{t.course}</div>
+                <div className="item-sub">{t.institution}</div>
+                {t.note && <p className="muted">{t.note}</p>}
+                {(t.students || t.instructor) && (
+                  <p className="muted">
+                    {[t.students && `${t.students} students`, t.instructor && `Instructor: ${t.instructor}`]
+                      .filter(Boolean).join(' · ')}
+                  </p>
+                )}
               </div>
-              <span className={styles.amount}>{a.amount}</span>
-            </div>
-          ))}
-        </div>
+            ))}
 
-        <div className={styles.aside}>
-          <div className={styles.subHead}>Teaching</div>
-          {teaching.map((t, i) => (
-            <div key={i} className={styles.card}>
-              <div className={styles.cardTop}>
-                <span className={styles.cardRole}>{t.role}</span>
-                <span className={styles.cardTerm}>{t.term}</span>
+            <h3 className="subhead">Professional Service</h3>
+            {service.map(s => (
+              <div key={s.event} className="entry">
+                <div className="entry-top">
+                  <span className="entry-role">{s.role}</span>
+                  <span className="entry-term">{s.year}</span>
+                </div>
+                <div className="item-title">{s.event}</div>
+                <div className="item-sub">{s.org}</div>
               </div>
-              <div className={styles.cardCourse}>{t.course}</div>
-              <div className={styles.cardInst}>{t.institution}</div>
-              <p className={styles.cardNote}>{t.note}</p>
-              <div className={styles.cardMeta}>
-                <span className={styles.pill}>{t.students} students</span>
-                <span className={styles.pill}>Instructor: {t.instructor}</span>
-              </div>
-            </div>
-          ))}
-
-          <div className={styles.subHead} style={{ marginTop: '2rem' }}>Professional Service</div>
-          {service.map((s, i) => (
-            <div key={i} className={styles.card}>
-              <div className={styles.cardTop}>
-                <span className={styles.cardRole}>{s.role}</span>
-                <span className={styles.cardTerm}>{s.year}</span>
-              </div>
-              <div className={styles.cardCourse}>{s.event}</div>
-              <div className={styles.cardInst}>{s.org}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

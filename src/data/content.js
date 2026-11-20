@@ -58,19 +58,6 @@ export const workflows = [
   },
 ]
 
-export const heroPills = [
-  'Plant molecular biology',
-  'Cotton–nematode interactions',
-  'Crop stress biology',
-  'RNA-seq transcriptomics',
-  'Rhizosphere microbiome',
-  'Functional genomics',
-  'Greenhouse experiments',
-  'DNA/RNA isolation',
-  'R bioinformatics',
-  'Linux workflows',
-]
-
 export const research = [
   {
     num: '01',
@@ -228,215 +215,53 @@ export const projects = [
   },
 ]
 
-export const skillTabs = [
+export const skillGroups = [
   {
-    id: 'plant',
-    label: 'Plant Biology',
-    cards: [
-      {
-        icon: 'ti-leaf',
-        title: 'Plant stress biology',
-        desc: 'Interpreting plant responses to biotic stress (reniform nematode infestation) and abiotic stress (salt, drought) through integration of greenhouse phenotyping, molecular markers, and multi-omics data to resolve genotype-specific stress mechanisms.',
-        tags: ['Cotton', 'Soybean', 'Microgreens', 'Reniform nematode', 'Salt stress', 'Drought stress'],
-      },
-      {
-        icon: 'ti-seedling',
-        title: 'Greenhouse and controlled-environment experiments',
-        desc: 'Designing statistically rigorous greenhouse assays with balanced control/treatment structure, biological replication, time-course sampling, and growth phenotyping — from experimental layout through data collection and metadata management.',
-        tags: ['Controls', 'Treatments', 'Replicates', 'Randomization', 'Time-course', 'Phenotyping'],
-      },
-      {
-        icon: 'ti-bug',
-        title: 'Nematology workflows',
-        desc: 'Reniform nematode greenhouse inoculation and assessment protocols, including soil/root extraction, egg mass isolation, inoculum preparation, microscope counting, and standardized plant-response scoring.',
-        tags: ['Nematode extraction', 'Soil samples', 'Root samples', 'Egg extraction', 'Microscope counting', 'Inoculation'],
-      },
-      {
-        icon: 'ti-test-pipe',
-        title: 'Plant and rhizosphere sampling',
-        desc: 'Root, leaf, soil, and rhizosphere sampling for RNA-seq, microbiome profiling, and PCR-based applications, with emphasis on sample integrity, cold-chain management, and metadata recording for downstream genomics workflows.',
-        tags: ['Root sampling', 'Leaf sampling', 'Rhizosphere soil', 'Sample labeling', 'Cold storage', 'Metadata'],
-      },
+    label: 'Transcriptomics',
+    items: [
+      { title: 'RNA-seq experimental design', tools: ['Metadata design', 'Replicates', 'Treatment effects', 'Time effects', 'Genotype effects', 'Interaction models'] },
+      { title: 'Read QC and expression quantification', tools: ['FASTQ', 'fastp', 'FastQC', 'Salmon', 'RSEM', 'Count matrices'] },
+      { title: 'Differential expression analysis', tools: ['DESeq2', 'apeglm', 'ashr', 'edgeR', 'limma', 'PCA'] },
+      { title: 'Genome annotation and ID mapping', tools: ['GTF/GFF3', 'tx2gene', 'UniProt', 'BioMart', 'NCBI', 'KEGG KO'] },
+      { title: 'GO enrichment analysis', tools: ['clusterProfiler', 'enrichplot', 'GOplot', 'fgsea', 'ORA', 'GSEA'] },
+      { title: 'KEGG pathway analysis', tools: ['KEGGREST', 'pathview', 'KEGG ORA', 'KEGG GSEA', 'KO IDs', 'Pathway mapping'] },
+      { title: 'Scientific visualization', tools: ['ggplot2', 'ComplexHeatmap', 'pheatmap', 'VennDiagram', 'UpSetR', 'ComplexUpset'] },
+      { title: 'Candidate gene and pathway interpretation', tools: ['Candidate genes', 'Gene labels', 'Defense response', 'Stress pathways', 'Multi-omics', 'Interpretation'] },
     ],
   },
   {
-    id: 'wetlab',
-    label: 'Wet Lab',
-    cards: [
-      {
-        icon: 'ti-flask',
-        title: 'DNA and RNA isolation',
-        desc: 'Plant nucleic acid extraction using CTAB and column-based (RNeasy) methods from root, leaf, and soil matrices, with quality assessment by spectrophotometry and gel electrophoresis prior to sequencing or expression analysis.',
-        tags: ['CTAB DNA extraction', 'RNeasy RNA extraction', 'Plant tissue', 'Root/leaf samples', 'RNA quality', 'DNA quality'],
-      },
-      {
-        icon: 'ti-dna',
-        title: 'RT-qPCR and gene expression',
-        desc: 'Primer design (Primer3), RT-qPCR setup, melt-curve validation, and Delta-Delta Ct quantification for relative gene expression analysis — providing bench-level validation of transcriptomic findings from RNA-seq workflows.',
-        tags: ['Primer3', 'PCR', 'RT-qPCR', 'Melt curves', 'Delta-Delta Ct', 'Gene expression'],
-      },
-      {
-        icon: 'ti-microscope',
-        title: 'Microscopy and laboratory methods',
-        desc: 'Scanning electron microscopy for plant tissue surface morphology, alongside standard laboratory methods including gel electrophoresis, spectrophotometry, autoclave sterilization, and controlled-environment equipment.',
-        tags: ['SEM', 'Gel electrophoresis', 'Spectrophotometer', 'Autoclave', 'Micropipette', 'Incubator'],
-      },
-      {
-        icon: 'ti-plant-2',
-        title: 'Agronomy and applied plant science',
-        desc: 'Foundation in controlled-environment agronomy, microgreen production systems, seed quality testing, plant tissue culture, biocontrol-agent production, and integrated pest management — knowledge that informs experimental design for crop-stress research.',
-        tags: ['Agronomy', 'Tissue culture', 'Seed testing', 'Microgreens', 'Biocontrol', 'IPM'],
-      },
-    ],
-  },
-  {
-    id: 'rnaseq',
-    label: 'RNA-seq & Genomics',
-    cards: [
-      {
-        icon: 'ti-file-code',
-        title: 'RNA-seq experimental design',
-        desc: 'Structuring RNA-seq experiments to resolve treatment, genotype, time-course, mutant-vs-WT, and interaction effects, with attention to confounding variables, replicate sufficiency, and the statistical power needed for reliable differential expression calls.',
-        tags: ['Metadata design', 'Replicates', 'Treatment effects', 'Time effects', 'Genotype effects', 'Interaction models'],
-      },
-      {
-        icon: 'ti-chart-scatter',
-        title: 'Read QC and expression quantification',
-        desc: 'FASTQ quality control, adapter trimming (fastp), alignment-free quantification (Salmon), and count matrix assembly via tximport — providing clean, reproducible inputs for differential expression analysis.',
-        tags: ['FASTQ', 'fastp', 'FastQC', 'Salmon', 'RSEM', 'Count matrices'],
-      },
-      {
-        icon: 'ti-chart-bar',
-        title: 'Differential expression analysis',
-        desc: 'DESeq2-based workflows for DEG identification, log-fold-change shrinkage (apeglm/ashr), and visualization (PCA, MA plots, volcano plots, heatmaps, UpSet diagrams) to characterize the scale and biological coherence of transcriptional responses.',
-        tags: ['DESeq2', 'apeglm', 'ashr', 'edgeR', 'limma', 'PCA'],
-      },
-      {
-        icon: 'ti-git-branch',
-        title: 'Genome annotation and ID mapping',
-        desc: 'Linking gene, transcript, locus tag, NCBI, UniProt, CottonGen, GO, and KEGG KO identifiers across annotation databases to ensure reliable mapping from count data through enrichment analysis.',
-        tags: ['GTF/GFF3', 'tx2gene', 'UniProt', 'BioMart', 'NCBI', 'KEGG KO'],
-      },
-    ],
-  },
-  {
-    id: 'microbiome',
     label: 'Microbiome',
-    cards: [
-      {
-        icon: 'ti-microscope',
-        title: '16S and ITS amplicon analysis',
-        desc: 'End-to-end QIIME2/DADA2 pipelines for bacterial and fungal community profiling — from raw paired-end reads through denoising, taxonomic classification, and export of feature tables and phylogenetic trees for R-based downstream analysis.',
-        tags: ['QIIME2', 'DADA2', 'Cutadapt', 'BIOM', 'QZA/QZV', 'ASV tables'],
-      },
-      {
-        icon: 'ti-chart-pie',
-        title: 'Diversity analysis and multivariate statistics',
-        desc: 'Alpha diversity (richness, Shannon, Faith\'s PD), beta diversity ordination (Bray-Curtis, UniFrac, PCoA), PERMANOVA for group-level community differences, and betadisper for dispersion homogeneity — with biological interpretation of significant contrasts.',
-        tags: ['phyloseq', 'vegan', 'Alpha diversity', 'PCoA', 'PERMANOVA', 'betadisper'],
-      },
-      {
-        icon: 'ti-topology-star',
-        title: 'Taxonomy and predicted functional profiling',
-        desc: 'Taxonomic abundance summaries, core microbiome characterization, differential abundance testing, and PICRUSt2-based prediction of functional potential (KO, EC, MetaCyc pathways) to link community composition to metabolic capacity.',
-        tags: ['Taxonomy plots', 'Core microbiome', 'PICRUSt2', 'ggpicrust2', 'KO', 'MetaCyc'],
-      },
-      {
-        icon: 'ti-tree',
-        title: 'Phylogenetic analysis',
-        desc: 'Working with rooted phylogenetic trees for UniFrac-based beta diversity and phylogeny-aware analyses, using ape, ggtree, and phytools within microbiome community analysis pipelines.',
-        tags: ['ape', 'ggtree', 'tidytree', 'phytools', 'qiime2R', 'phyloseq tree'],
-      },
+    items: [
+      { title: '16S and ITS amplicon analysis', tools: ['QIIME2', 'DADA2', 'Cutadapt', 'BIOM', 'QZA/QZV', 'ASV tables'] },
+      { title: 'Diversity analysis and multivariate statistics', tools: ['phyloseq', 'vegan', 'Alpha diversity', 'PCoA', 'PERMANOVA', 'betadisper'] },
+      { title: 'Taxonomy and predicted functional profiling', tools: ['Taxonomy plots', 'Core microbiome', 'PICRUSt2', 'ggpicrust2', 'KO', 'MetaCyc'] },
+      { title: 'Phylogenetic analysis', tools: ['ape', 'ggtree', 'tidytree', 'phytools', 'qiime2R', 'phyloseq tree'] },
     ],
   },
   {
-    id: 'functional',
-    label: 'Functional Genomics',
-    cards: [
-      {
-        icon: 'ti-circle-dot',
-        title: 'GO enrichment analysis',
-        desc: 'Over-representation analysis (ORA) and gene set enrichment analysis (GSEA) for biological process, molecular function, and cellular component GO terms — extracting mechanistic insight from differential expression results.',
-        tags: ['clusterProfiler', 'enrichplot', 'GOplot', 'fgsea', 'ORA', 'GSEA'],
-      },
-      {
-        icon: 'ti-route',
-        title: 'KEGG pathway analysis',
-        desc: 'KEGG ORA and GSEA, KO mapping, pathway membership interpretation, and pathview visualizations linking gene expression changes to canonical metabolic and signaling pathways.',
-        tags: ['KEGGREST', 'pathview', 'KEGG ORA', 'KEGG GSEA', 'KO IDs', 'Pathway mapping'],
-      },
-      {
-        icon: 'ti-chart-dots',
-        title: 'Scientific visualization',
-        desc: 'Publication-quality figures for transcriptomics, microbiome, enrichment analysis, and agronomy data, with consistent aesthetics across projects using modular ggplot2-based workflows.',
-        tags: ['ggplot2', 'ComplexHeatmap', 'pheatmap', 'VennDiagram', 'UpSetR', 'ComplexUpset'],
-      },
-      {
-        icon: 'ti-dna',
-        title: 'Candidate gene and pathway interpretation',
-        desc: 'Connecting differentially expressed genes, annotation identifiers, and enriched pathways to biologically coherent stress-response models — integrating transcriptomics, microbiome, and phenotypic data for holistic interpretation.',
-        tags: ['Candidate genes', 'Gene labels', 'Defense response', 'Stress pathways', 'Multi-omics', 'Interpretation'],
-      },
+    label: 'Nematology & wet lab',
+    items: [
+      { title: 'Plant stress biology', tools: ['Cotton', 'Soybean', 'Microgreens', 'Reniform nematode', 'Salt stress', 'Drought stress'] },
+      { title: 'Greenhouse and controlled-environment experiments', tools: ['Controls', 'Treatments', 'Replicates', 'Randomization', 'Time-course', 'Phenotyping'] },
+      { title: 'Nematology workflows', tools: ['Nematode extraction', 'Soil samples', 'Root samples', 'Egg extraction', 'Microscope counting', 'Inoculation'] },
+      { title: 'Plant and rhizosphere sampling', tools: ['Root sampling', 'Leaf sampling', 'Rhizosphere soil', 'Sample labeling', 'Cold storage', 'Metadata'] },
+      { title: 'DNA and RNA isolation', tools: ['CTAB DNA extraction', 'RNeasy RNA extraction', 'Plant tissue', 'Root/leaf samples', 'RNA quality', 'DNA quality'] },
+      { title: 'RT-qPCR and gene expression', tools: ['Primer3', 'PCR', 'RT-qPCR', 'Melt curves', 'Delta-Delta Ct', 'Gene expression'] },
+      { title: 'Microscopy and laboratory methods', tools: ['SEM', 'Gel electrophoresis', 'Spectrophotometer', 'Autoclave', 'Micropipette', 'Incubator'] },
+      { title: 'Agronomy and applied plant science', tools: ['Agronomy', 'Tissue culture', 'Seed testing', 'Microgreens', 'Biocontrol', 'IPM'] },
     ],
   },
   {
-    id: 'rpkgs',
-    label: 'R Packages',
-    cards: [
-      {
-        icon: 'ti-table',
-        title: 'Data wrangling and file handling',
-        desc: 'Reproducible metadata management, annotation table joins, multi-format file import (Excel/CSV/TSV), output filtering, and modular script design for scalable omics analysis pipelines.',
-        tags: ['tidyverse', 'dplyr', 'tidyr', 'readr', 'stringr', 'data.table'],
-      },
-      {
-        icon: 'ti-chart-line',
-        title: 'Visualization packages',
-        desc: 'Custom figure production for omics, microbiome, enrichment, and agronomic data, with publication-ready aesthetics using layered ggplot2-based approaches.',
-        tags: ['ggplot2', 'ggrepel', 'patchwork', 'ggprism', 'ggh4x', 'viridis'],
-      },
-      {
-        icon: 'ti-math-function',
-        title: 'Statistics and omics packages',
-        desc: 'RNA-seq differential expression testing, count normalization, log-fold-change shrinkage, microbiome multivariate statistics, and differential abundance analysis.',
-        tags: ['DESeq2', 'tximport', 'edgeR', 'limma', 'vegan', 'Maaslin2'],
-      },
-      {
-        icon: 'ti-database',
-        title: 'Bioconductor annotation packages',
-        desc: 'Genome annotation parsing, genomic range operations, biological sequence handling, and programmatic access to pathway and orthology databases for ID mapping and enrichment.',
-        tags: ['rtracklayer', 'GenomicFeatures', 'Biostrings', 'AnnotationDbi', 'biomaRt', 'KEGGREST'],
-      },
-    ],
-  },
-  {
-    id: 'linux',
     label: 'Computing',
-    cards: [
-      {
-        icon: 'ti-terminal',
-        title: 'Linux bioinformatics workflows',
-        desc: 'Ubuntu workstation-based analysis pipeline management, including file-system organization, process monitoring, package installation, storage management, and handling of large genomics datasets generated from sequencing runs.',
-        tags: ['Ubuntu', 'Bash', 'File management', 'md5sum', 'Permissions', 'Logs'],
-      },
-      {
-        icon: 'ti-folder-check',
-        title: 'Reproducible project organization',
-        desc: 'Structured, numbered project directories with rerunnable scripts, QC report archiving, results tables, and figure versioning — enabling clear audit trails and reproducible re-analysis.',
-        tags: ['README files', 'Scripts', 'Metadata', 'QC reports', 'Results tables', 'Figures'],
-      },
-      {
-        icon: 'ti-brand-python',
-        title: 'Python for bioinformatics and data automation',
-        desc: 'Developing Python proficiency applied to file parsing, metadata manipulation, bioinformatics task automation, and data transformation for omics workflows.',
-        tags: ['pandas', 'pathlib', 'argparse', 'Jupyter', 'f-strings', 'string parsing'],
-      },
-      {
-        icon: 'ti-database-search',
-        title: 'SAS and structured data analysis',
-        desc: 'Applied SAS PROC procedures for agronomic trial analysis during Master\'s research, including ANOVA, means comparisons, and repeated-measures models for controlled-environment experimental data.',
-        tags: ['SAS PROC', 'ANOVA', 'RStudio', 'SELECT', 'WHERE', 'GROUP BY'],
-      },
+    items: [
+      { title: 'Data wrangling and file handling', tools: ['tidyverse', 'dplyr', 'tidyr', 'readr', 'stringr', 'data.table'] },
+      { title: 'Visualization packages', tools: ['ggplot2', 'ggrepel', 'patchwork', 'ggprism', 'ggh4x', 'viridis'] },
+      { title: 'Statistics and omics packages', tools: ['DESeq2', 'tximport', 'edgeR', 'limma', 'vegan', 'Maaslin2'] },
+      { title: 'Bioconductor annotation packages', tools: ['rtracklayer', 'GenomicFeatures', 'Biostrings', 'AnnotationDbi', 'biomaRt', 'KEGGREST'] },
+      { title: 'Linux bioinformatics workflows', tools: ['Ubuntu', 'Bash', 'File management', 'md5sum', 'Permissions', 'Logs'] },
+      { title: 'Reproducible project organization', tools: ['README files', 'Scripts', 'Metadata', 'QC reports', 'Results tables', 'Figures'] },
+      { title: 'Python for bioinformatics and data automation', tools: ['pandas', 'pathlib', 'argparse', 'Jupyter', 'f-strings', 'string parsing'] },
+      { title: 'SAS and structured data analysis', tools: ['SAS PROC', 'ANOVA', 'RStudio', 'SELECT', 'WHERE', 'GROUP BY'] },
     ],
   },
 ]

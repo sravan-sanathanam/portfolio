@@ -1,35 +1,25 @@
 import React from 'react'
 import { publications } from '../data/content'
-import styles from './Publications.module.css'
 
 export default function Publications() {
   return (
-    <section id="publications" className={styles.section}>
-      <div className={styles.header}>
-        <p className="eyebrow">Publications</p>
-        <h2 className={styles.title}>Selected Work</h2>
-      </div>
-      <div className={styles.list}>
-        {publications.map((pub, i) => (
-          <a
-            key={i}
-            href={pub.doi}
-            className={styles.item}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className={styles.year}>{pub.year}</span>
-            <div className={styles.content}>
-              <div className={styles.pubTitle}>{pub.title}</div>
-              <div className={styles.meta}>
-                <span className={styles.journal}>{pub.journal}</span>
-                <span className={styles.dot}>·</span>
-                <span className={styles.role}>{pub.role}</span>
+    <section id="publications" className="section" aria-labelledby="publications-heading">
+      <div className="container">
+        <p className="section-label">Publications</p>
+        <h2 id="publications-heading">Selected Work</h2>
+        <ul className="year-list">
+          {publications.map(pub => (
+            <li key={pub.title}>
+              <span className="year">{pub.year}</span>
+              <div>
+                {pub.doi && pub.doi !== '#'
+                  ? <a href={pub.doi} className="item-title" target="_blank" rel="noopener noreferrer">{pub.title}</a>
+                  : <span className="item-title">{pub.title}</span>}
+                <div className="item-sub">{pub.journal}</div>
               </div>
-            </div>
-            <i className={`ti ti-external-link ${styles.extIcon}`} aria-hidden="true" />
-          </a>
-        ))}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

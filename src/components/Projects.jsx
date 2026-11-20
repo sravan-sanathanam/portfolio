@@ -1,42 +1,27 @@
 import React from 'react'
 import { projects } from '../data/content'
-import styles from './Projects.module.css'
-
-function PillList({ label, items }) {
-  return (
-    <div className={styles.pillBlock}>
-      <div className={styles.pillLabel}>{label}</div>
-      <div className={styles.pills}>
-        {items.map(item => <span key={item} className={styles.pill}>{item}</span>)}
-      </div>
-    </div>
-  )
-}
 
 export default function Projects() {
   return (
-    <section id="projects" className={styles.section}>
-      <div className={styles.header}>
-        <p className="eyebrow">Projects</p>
-        <h2 className={styles.title}>Portfolio Case Studies</h2>
-        <p className={styles.intro}>
+    <section id="projects" className="section" aria-labelledby="projects-heading">
+      <div className="container">
+        <p className="section-label">Projects</p>
+        <h2 id="projects-heading">Portfolio Case Studies</h2>
+        <p className="lead">
           Selected projects showing the full research path: biological question,
           experimental design, sequencing data, R/Linux analysis, visualization, and interpretation.
         </p>
-      </div>
-      <div className={styles.grid}>
-        {projects.map((project, index) => (
-          <article key={project.title} className={styles.card}>
-            <div className={styles.topline}>
-              <span className={styles.index}>{String(index + 1).padStart(2, '0')}</span>
-              <span className={styles.type}>{project.type.split('/')[0].trim()}</span>
-            </div>
-            <h3 className={styles.cardTitle}>{project.title}</h3>
-            <p className={styles.question}>{project.question}</p>
-            <PillList label="Methods" items={project.methods} />
-            <PillList label="Outputs" items={project.outputs} />
-          </article>
-        ))}
+        <div>
+          {projects.map(project => (
+            <article key={project.title} className="project">
+              <p className="project-type">{project.type}</p>
+              <h3>{project.title}</h3>
+              <p>{project.question}</p>
+              <p className="project-meta"><strong>Methods:</strong> {project.methods.join(', ')}</p>
+              <p className="project-meta"><strong>Outputs:</strong> {project.outputs.join(', ')}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )
