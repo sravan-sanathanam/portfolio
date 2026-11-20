@@ -19,7 +19,7 @@
   --gutter: 24px;
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -90,12 +90,16 @@ ul, ol { list-style: none; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  min-height: 64px;
+  padding-top: 28px;
+  padding-bottom: 18px;
 }
 .site-name {
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
   color: var(--heading);
   text-decoration: none;
 }
@@ -170,17 +174,21 @@ ul, ol { list-style: none; }
   gap: 64px;
   align-items: start;
 }
-.hero-label {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 16px;
-}
 .hero h1 {
   font-size: clamp(2.1rem, 4.5vw, 3rem);
-  margin-bottom: 20px;
+  max-width: 15em;
+  text-wrap: balance;
+  margin-bottom: 14px;
+}
+.hero-dissertation {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.45;
+  color: var(--secondary);
+  max-width: 560px;
+  text-wrap: balance;
+  margin-bottom: 28px;
 }
 .hero-text {
   font-size: 1.08rem;
@@ -196,6 +204,7 @@ ul, ol { list-style: none; }
 .facts {
   border-left: 1px solid var(--divider);
   padding-left: 32px;
+  margin-top: 8px;
 }
 .facts div { padding: 12px 0; border-bottom: 1px solid var(--divider); }
 .facts div:first-child { padding-top: 0; }
@@ -351,8 +360,8 @@ a.item-title:hover { color: var(--accent); text-decoration-color: var(--accent);
   .facts { border-left: none; padding-left: 0; border-top: 1px solid var(--divider); padding-top: 24px; }
 }
 
-@media (max-width: 720px) {
-  :root { --gutter: 16px; }
+/* Collapse the nav into a menu before the links crowd the name */
+@media (max-width: 960px) {
   .menu-button { display: inline-block; }
   .nav-links {
     display: none;
@@ -368,9 +377,21 @@ a.item-title:hover { color: var(--accent); text-decoration-color: var(--accent);
   }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 10px 0; font-size: 1rem; }
+}
+
+@media (max-width: 720px) {
+  :root { --gutter: 16px; }
+  .site-header .container { padding-top: 20px; padding-bottom: 14px; }
+  .site-name { font-size: 0.98rem; letter-spacing: 0.06em; }
+  .hero-dissertation { font-size: 1.02rem; }
   .hero { padding: 56px 0; }
   .section { padding: 56px 0; }
   .section h2 { font-size: 1.7rem; }
+}
+
+@media (max-width: 360px) {
+  .site-header .container { gap: 12px; }
+  .site-name { font-size: 0.86rem; letter-spacing: 0.05em; }
 }
 
 @media (max-width: 520px) {

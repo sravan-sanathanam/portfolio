@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <header className="site-header">
       <div className="container">
-        <a href="#top" className="site-name">{personal.name}</a>
+        <a href="#top" className="site-name">{personal.shortName}</a>
         <button
           type="button"
           className="menu-button"

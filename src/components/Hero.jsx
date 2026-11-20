@@ -13,8 +13,11 @@ export default function Hero() {
     <section id="top" className="hero" aria-labelledby="hero-heading">
       <div className="container">
         <div>
-          <p className="hero-label">Plant Genomics · Multi-Omics · Crop Protection</p>
-          <h1 id="hero-heading">Understanding how cotton resists the reniform nematode</h1>
+          <h1 id="hero-heading">Multi-Omics of Nematode Resistance in Cotton</h1>
+          <p className="hero-dissertation">
+            Dissertation: Systems Level Approach to Explore Reniform Nematode
+            Resistance in Cotton
+          </p>
           <p className="hero-text">
             I compare susceptible and tolerant cotton genotypes under reniform
             nematode pressure, combining RNA-seq with 16S/ITS rhizosphere

@@ -1,5 +1,6 @@
 export const personal = {
   name: 'Sravan Kumar Sanathanam',
+  shortName: 'Sravan K. Sanathanam',
   title: 'Plant Molecular Biology & Bioinformatics Researcher',
   institution: 'Alabama A&M University',
   tagline: 'Plant Molecular Biology, Transcriptomics, Microbiome & Functional Genomics',
