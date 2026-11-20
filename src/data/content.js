@@ -4,7 +4,7 @@ export const personal = {
   institution: 'Alabama A&M University',
   tagline: 'Plant Molecular Biology, Transcriptomics, Microbiome & Functional Genomics',
   bio: [
-    'Ph.D. candidate in Plant and Soil Science at Alabama A&M University. My research applies a multi-omics framework to cotton–reniform nematode (Rotylenchulus reniformis) interactions, combining whole-transcriptome RNA-seq with rhizosphere 16S/ITS amplicon sequencing to resolve how susceptible and tolerant Gossypium hirsutum genotypes diverge in transcriptional regulation and microbial community structure under nematode pressure.',
+    'Ph.D. student in Plant and Soil Science at Alabama A&M University. My research applies a multi-omics framework to cotton–reniform nematode (Rotylenchulus reniformis) interactions, combining whole-transcriptome RNA-seq with rhizosphere 16S/ITS amplicon sequencing to resolve how susceptible and tolerant Gossypium hirsutum genotypes diverge in transcriptional regulation and microbial community structure under nematode pressure.',
     'Bioinformatic workflows include expression quantification (Salmon/RSEM), differential expression analysis (DESeq2), GO/KEGG functional enrichment (clusterProfiler), and community profiling via QIIME2/DADA2 with phyloseq-based diversity analysis and predicted functional profiling (PICRUSt2). The work aims to identify candidate defense genes and microbiome bioindicators translatable to sustainable nematode management in cotton production.',
   ],
   email: 'sravan.sanathanam@gmail.com',
@@ -267,6 +267,7 @@ export const skillGroups = [
 ]
 
 export const awards = [
+  { year: '2026', title: 'Third Place, Graduate Student Poster Competition (Agricultural Systems and Technology)', org: 'Association of Research Directors Symposium', amount: '' },
   { year: '2025', title: 'Black Tie Gala Scholarship', org: 'Alabama A&M University', amount: '$2,000' },
   { year: '2024', title: 'Graduate Oral Competition – 2nd Place', org: 'AAMU STEM DAY 2024', amount: '$150' },
   { year: '2023–24', title: 'EPSCoR Graduate Research Scholars Program (GRSP)', org: 'Alabama EPSCoR', amount: '$18,750/yr' },
@@ -279,6 +280,13 @@ export const awards = [
 
 export const teaching = [
   {
+    term: 'Fall 2026',
+    role: 'Graduate Instructor',
+    course: 'NRE 535 – Introduction to Bioinformatics',
+    institution: 'Alabama A&M University',
+    note: 'Taught the full graduate course under faculty supervision (NRE 798 Teaching Experience).',
+  },
+  {
     term: 'Spring 2024',
     role: 'Teaching Assistant',
     course: 'NRE 199 – Technology in Agricultural & Biological Sciences',
@@ -287,6 +295,11 @@ export const teaching = [
     students: 25,
     note: 'Introductory course for freshmen in Agricultural Sciences covering report writing, data analysis, presentations, GIS, statistics, and precision agriculture.',
   },
+]
+
+export const talks = [
+  { year: '2025', title: 'Invited talk', event: 'NSF EPSCoR FTPP Annual Meeting' },
+  { year: '2024', title: 'Invited talk', event: 'NSF EPSCoR FTPP Annual Meeting' },
 ]
 
 export const service = [
@@ -305,6 +318,7 @@ export const publications = [
     journal: 'Frontiers in Microbiomes',
     role: 'Author',
     doi: 'https://doi.org/10.3389/frmbi.2025.1614472',
+    peerReviewed: true,
   },
   {
     year: '2025',
@@ -312,6 +326,15 @@ export const publications = [
     journal: 'Global Journal of Agricultural and Allied Sciences',
     role: 'Author',
     doi: 'https://doi.org/10.35251/gjaas.2025.007',
+    peerReviewed: true,
+  },
+  {
+    year: '2025',
+    title: 'Evaluation of turmeric (Curcuma longa) varieties in high tunnel vs. open field',
+    journal: 'Global Journal of Agricultural and Allied Sciences',
+    role: 'Author',
+    doi: '',
+    peerReviewed: true,
   },
   {
     year: '2024',
@@ -319,6 +342,7 @@ export const publications = [
     journal: 'Journal of Medicinally Active Plants',
     role: 'Author',
     doi: 'https://doi.org/10.7275/jmap.2315',
+    peerReviewed: true,
   },
   {
     year: '2024',
@@ -342,3 +366,8 @@ export const publications = [
     doi: 'https://ashs.confex.com/ashs/2023/meetingapp.cgi/Paper/40180',
   },
 ]
+
+export const inPreparation = {
+  count: 5,
+  topics: 'salt tolerance in soybean and cotton, soil microbial diversity, bat microbiomes',
+}

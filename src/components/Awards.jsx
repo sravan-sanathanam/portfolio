@@ -1,5 +1,5 @@
 import React from 'react'
-import { awards, teaching, service } from '../data/content'
+import { awards, teaching, talks, service } from '../data/content'
 
 export default function Awards() {
   return (
@@ -43,6 +43,19 @@ export default function Awards() {
                 )}
               </div>
             ))}
+
+            <h3 className="subhead">Invited Talks</h3>
+            <ul className="year-list">
+              {talks.map(t => (
+                <li key={t.year + t.event}>
+                  <span className="year">{t.year}</span>
+                  <div>
+                    <div className="item-title">{t.event}</div>
+                    <div className="item-sub">{t.title}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
 
             <h3 className="subhead">Professional Service</h3>
             {service.map(s => (

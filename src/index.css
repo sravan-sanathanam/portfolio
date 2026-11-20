@@ -380,3 +380,9 @@ a.item-title:hover { color: var(--accent); text-decoration-color: var(--accent);
   .profile div { grid-template-columns: 1fr; gap: 0; }
   .entry-top { flex-direction: column; gap: 0; }
 }
+
+.in-prep {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--divider);
+}
