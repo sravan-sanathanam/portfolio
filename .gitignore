@@ -4,3 +4,4 @@ dist/
 .Rhistory
 *.docx
 .claude/
+dist-ssr/
